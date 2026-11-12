@@ -72,7 +72,8 @@ public class Reserva {
                     "Solo una reserva confirmada puede ingresar; esta está " + estado);
         }
         if (asistencia != null) {
-            throw new IllegalStateException("Esta reserva ya registró su ingreso");
+            throw new IllegalStateException(
+                    "Esta reserva ya registró su ingreso a las " + asistencia.getHora());
         }
         asistencia = new Asistencia(ahora);
         return asistencia;
