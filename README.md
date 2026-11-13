@@ -7,7 +7,7 @@ Proyecto de semestre de Ingeniería de Software, Universidad de los Llanos.
 
 | Integrante | Usuario de GitHub | Rol |
 | --- | --- | --- |
-| _(completar)_ | `santiFst` | Integrador (único que hace merge a `main`) |
+| Carlos Acebedo| `santiFst` | Integrador (único que hace merge a `main`) |
 | _(completar)_ | _(completar)_ | Desarrollador |
 | _(completar)_ | _(completar)_ | Desarrollador |
 | _(completar)_ | _(completar)_ | Desarrollador |
@@ -23,7 +23,7 @@ JavaFX 21 y H2 se descargan solos con Maven; no hay pasos manuales.
 
 ```bash
 mvn compile        # compila
-mvn test           # ejecuta las 60 pruebas entregadas por los docentes
+mvn test           # ejecuta las pruebas entregadas por los docentes
 mvn javafx:run     # abre la aplicación
 ```
 
@@ -47,8 +47,10 @@ Arquitectura limpia con un paquete por anillo. Las dependencias apuntan hacia ad
 | Entidades | `co.edu.unillanos.campusfest.domain` |
 | Casos de uso | `co.edu.unillanos.campusfest.application.usecase` |
 | Puertos | `co.edu.unillanos.campusfest.application.port` |
-| Adaptadores | `co.edu.unillanos.campusfest.infrastructure.persistence` y `.infrastructure.ui` |
-| Frameworks y drivers | `co.edu.unillanos.campusfest` (`App`, `Launcher`) |
+| Adaptadores | `co.edu.unillanos.campusfest.infrastructure.persistence`, `.infrastructure.ui` y `.infrastructure.reloj` |
+| Frameworks y drivers | `co.edu.unillanos.campusfest` (`App`, `Launcher`), vistas FXML, CSS y script SQL |
+
+Recursos: vistas FXML y CSS en `src/main/resources/co/edu/unillanos/campusfest/vistas/` y esquema H2 en `src/main/resources/db/schema.sql`.
 
 El contrato completo que deben cumplir las clases está en [`docs/CONTRATO.md`](docs/CONTRATO.md).
 Las pruebas de `src/test/java` son las entregadas por los docentes y no se modifican.
